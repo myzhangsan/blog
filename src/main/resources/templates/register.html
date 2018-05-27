@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <!--视口的设置，让网页能等比例的缩放到对应设备中-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--告诉ie浏览器用最新内核去渲染网页-->
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+<div class="container">
+ <h2>注册</h2> 
+    <form action ="" >
+         <div class="form-group row">
+             <label class="col-sm-2 col-form-label" for="inputUserName">username:</label>
+             <div class="col-sm-4">
+                  <input type="text" class="form-control" placeHolder="username" id="inputUserName">
+             </div>
+          </div>
+          <div class="form-group row">
+             <label class="col-sm-2 col-form-label">password:</label>
+             <div class="col-sm-4">
+                  <input type="text" class="form-control" placeHolder="password" id="inputPassword">
+             </div>
+          </div>
+          <div class="form-group row">
+             <label class="col-sm-2 col-form-label" for="inputName">name:</label>
+             <div class="col-sm-4">
+                  <input class="form-control" type="text" placeHolder="name" id="inputName">
+             </div>
+          </div>
+          <div class="form-group row">
+             <label class="form-label col-sm-2">email:</label>
+             <div class="col-sm-4">
+                  <input class="form-control" type="text" placeHolder="email" id="inputEMail">
+             </div>
+          </div>
+          <div>
+               <button  type="submit">提交</button>
+          </div>
+    </form>
+</div>
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
