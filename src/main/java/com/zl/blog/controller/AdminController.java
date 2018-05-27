@@ -2,6 +2,7 @@ package com.zl.blog.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -20,7 +21,9 @@ public class AdminController {
 	 * @param model
 	 * @return
 	 */
+	@GetMapping
 	public ModelAndView listUsers(Model model) {
-		return new ModelAndView("admins/index","menuList",model);
+		return new ModelAndView("admin/index","menuList",model);
 	}
+	
 }

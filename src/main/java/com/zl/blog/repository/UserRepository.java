@@ -14,7 +14,6 @@ import org.springframework.stereotype.Repository;
 
 import com.zl.blog.domain.User;
 
-@Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 	
 	/**
@@ -30,5 +29,5 @@ public interface UserRepository extends JpaRepository<User, Long>{
     * @param username
     * @return
     */
-  User findUserByUserNameLike(String username);
+    User findUserByUsernameLike(String username);
 }
